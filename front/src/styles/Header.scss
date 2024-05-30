@@ -1,0 +1,38 @@
+header {
+  @include flex(center);
+  border-bottom: 1px solid $light_gray;
+
+  .header__subcontainer {
+    width: $main_width;
+    @include flex(space-between, center);
+    height: 80px;
+    @include font(16px, 500);
+    color: $dark_gray;
+  }
+
+  a {
+    color: $dark_gray;
+  }
+
+  nav a:nth-of-type(2) {
+    margin: 0 20px;
+  }
+
+  button {
+    @include borderNRadius(none, 50%);
+  }
+
+  section {
+    @include flex($ai: center);
+
+    .separator {
+      border: 1px solid $light_gray;
+      height: 50px;
+      margin: 0 20px;
+    }
+
+    span {
+      margin: 0 18px 0 10px;
+    }
+  }
+}

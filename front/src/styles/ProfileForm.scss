@@ -1,0 +1,106 @@
+.profile_form {
+  @include flex(center);
+
+  form {
+    width: 970px;
+  }
+
+  .edit {
+    cursor: pointer;
+    @include font(16px, 500);
+    color: #13A3B9;
+  }
+
+  section {
+    @include flex(space-between, flex-start);
+    flex-wrap: wrap;
+
+    &:first-of-type div {
+      height: 274px;
+    }
+
+    &:nth-of-type(2) div {
+      height: 78px;
+    }
+
+    &:last-of-type div {
+      height: 176px;
+    }
+
+    div {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px 30px;
+    }
+
+  }
+
+  h5 {
+    @include font(18px, 600);
+    line-height: 22px;
+    color: #272A33;
+    margin-bottom: 20px;
+  }
+
+  label {
+    p {
+      @include font(14px, 500);
+      line-height: 17px;
+      color: #A8AAAE;
+      margin-bottom: 5px;
+    }
+
+    input {
+      width: 470px;
+      background: #F6F6F9;
+      padding: 17px 18px;
+      @include borderNRadius(none, 5px);
+      @include font(16px, 500);
+      line-height: 20px;
+    }
+  }
+
+  hr {
+    height: 1px;
+    background: $light_gray;
+    border: none;
+    margin: 40px 0;
+  }
+
+}
+
+.profile_form__subheading {
+  @include flex($ai: center);
+  margin-top: 40px;
+
+  span {
+    @include font(24px, 600);
+    margin: 0 20px;
+  }
+
+  button {
+    @include font(14px, 500);
+    line-height: 17px;
+    padding: 5px 10px;
+    @include borderNRadius(none, 5px);
+    cursor: pointer;
+
+    &:first-of-type {
+      @include bgNColor(#EAFBF5, #22B07D);
+    }
+
+    &:last-of-type {
+      @include bgNColor(#13A3B9, #FFF);
+      margin-left: 10px;
+    }
+  }
+}
+
+.profile_form__subcontainer {
+  width: $main_width;
+}
+
+.disabled {
+  opacity: .5;
+}

@@ -1,0 +1,93 @@
+footer {
+  margin-top: 80px;
+  @include flex(center);
+  padding: 80px 0 100px;
+  border-top: 1px solid $light_gray;
+
+  .footer__subcontainer {
+    width: $main_width;
+  }
+
+  section {
+
+    &:first-of-type,
+    &:nth-of-type(2) {
+      display: flex;
+      padding-bottom: 40px;
+      border-bottom: 1px solid $light_gray;
+    }
+
+    &:nth-of-type(2) {
+      height: 120px;
+      padding-top: 40px;
+      gap: 20px;
+    }
+
+    div:first-of-type {
+      width: 275px;
+    }
+
+    div:nth-of-type(2) {
+      margin: 0 150px 0 130px;
+    }
+
+    h1 {
+      @include font(20px, 700);
+    }
+
+    h4 {
+      @include font(20px, 700);
+      color: #272A33;
+    }
+
+    p,
+    a,
+    address {
+      @include font(14px, 500);
+      color: #676A71;
+    }
+
+    a {
+      display: inline-block;
+    }
+
+    address {
+      font-style: normal;
+    }
+
+    button {
+      @include font(14px, 500);
+      @include bgNColor($light_gray, #A8AAAE);
+      @include borderNRadius(none, 5px);
+      padding: 11.5px 14px;
+      cursor: pointer;
+
+    }
+  }
+
+  .mt-20 {
+    margin-top: 20px;
+  }
+
+  .mt-10 {
+    margin-top: 10px;
+  }
+
+  .lh-22 {
+    line-height: 22px;
+  }
+
+  .lh-17 {
+    line-height: 17px;
+  }
+
+  .copyright_info {
+    padding-top: 20px;
+    @include flex(center);
+    color: $gray;
+
+    p {
+      text-align: center;
+    }
+  }
+}

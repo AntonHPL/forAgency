@@ -1,0 +1,20 @@
+@mixin font($size, $weight) {
+  font-size: $size;
+  font-weight: $weight;
+}
+
+@mixin bgNColor($bgColor, $color) {
+  background: $bgColor;
+  color: $color;
+}
+
+@mixin borderNRadius($border, $radius) {
+  border: $border;
+  border-radius: $radius;
+}
+
+@mixin flex($jc: flex-start, $ai: stretch) {
+  display: flex;
+  justify-content: $jc;
+  align-items: $ai;
+}

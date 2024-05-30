@@ -1,0 +1,48 @@
+.enter_form {
+  @include flex(center);
+
+  .enter_form__subcontainer {
+    width: $main_width;
+  }
+
+  section {
+    @include flex(center);
+    margin-bottom: 80px;
+  }
+
+  label {
+    display: block;
+    margin-bottom: 20px;
+
+    &:first-of-type {
+      margin-top: 40px;
+    }
+
+    p {
+      @include font(14px, 500);
+      line-height: 17px;
+      color: $dark_gray;
+      margin-bottom: 5px;
+    }
+
+    input {
+      width: 470px;
+      background: #F6F6F9;
+      padding: 17px 18px;
+      @include borderNRadius(none, 5px);
+      @include font(16px, 500);
+      line-height: 20px;
+    }
+  }
+
+  .main_btn {
+    width: 470px;
+
+    &:last-of-type {
+      @include bgNColor(none, #676A71);
+      border: 1px solid $gray;
+      font-weight: 500;
+      margin-top: 20px;
+    }
+  }
+}

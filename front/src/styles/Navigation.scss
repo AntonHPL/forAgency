@@ -1,0 +1,21 @@
+.navigation {
+  margin: 80px 0 40px;
+
+  div {
+    display: inline-flex;
+    align-items: center;
+
+    * {
+      color: #272A33;
+    }
+  }
+
+  a {
+    @include font(16px, 500);
+    margin: 0 30px 0 20px;
+  }
+
+  .active * {
+    color: #676A71;
+  }
+}

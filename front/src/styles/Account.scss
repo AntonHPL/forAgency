@@ -1,0 +1,239 @@
+.account {
+  .upper_registers {
+    @include flex(center);
+
+    .upper_registers__subcontainer {
+      width: $main_width;
+    }
+  }
+
+  nav {
+    margin: 20px 0 80px;
+
+    button {
+      @include font(18px, 500);
+      padding: 10px 20px;
+      line-height: 22px;
+      @include bgNColor(none, $dark_gray);
+      border: none;
+
+      &:first-of-type {
+        color: #13A3B9;
+        border-bottom: 2px solid #13A3B9;
+        font-weight: 600;
+      }
+    }
+  }
+
+  .registers {
+    background: #F9F9F9;
+    @include flex(center);
+    padding-top: 80px;
+    margin-bottom: -80px;
+  }
+
+  .registers__subcontainer {
+    width: $main_width;
+
+    label {
+      p {
+        @include font(18px, 600);
+        color: $dark_gray;
+        line-height: 22px;
+        margin-bottom: 20px;
+      }
+
+      input {
+        width: 700px;
+        height: 60px;
+        @include borderNRadius(1px solid $light_gray, 10px 0 0 10px);
+        border-right: none;
+        padding: 16px;
+        font-size: 16px;
+        color: #D4D7DB;
+      }
+
+      button {
+        @include bgNColor(#13A3B9, #FFF);
+        padding: 17px 15px;
+        width: 170px;
+        height: 60px;
+        @include borderNRadius(none, 0 10px 10px 0);
+        @include font(18px, 600);
+      }
+    }
+  }
+
+  .registers__btns {
+    margin: 40px 0;
+    @include flex(space-between);
+
+    button {
+      padding: 5px 10px;
+      border-radius: 5px;
+      @include font(14px, 500);
+      display: inline-flex;
+      align-items: center;
+
+      img {
+        margin-right: 7px;
+      }
+
+      &.add {
+        @include bgNColor(#13A3B9, #FFF);
+        border: none;
+      }
+
+      &:not(.add) {
+        @include bgNColor(none, $dark_gray);
+        border: 1px solid $dark_gray;
+        margin-right: 20px;
+      }
+
+    }
+
+    .view {
+      @include flex($ai: center);
+
+      button {
+        width: 39px;
+        height: 39px;
+        display: inline-flex;
+        justify-content: center;
+        @include borderNRadius(none, 4px);
+
+        &:last-of-type {
+          background: #FFF;
+        }
+
+        img {
+          margin: 0;
+        }
+
+      }
+    }
+  }
+
+  table {
+    @include borderNRadius(1px solid $light_gray, 5px);
+    width: 100%;
+  }
+
+  .table_heading {
+    @include flex(space-between);
+    line-height: 22px;
+    margin-bottom: 20px;
+
+    span {
+      font-size: 16px;
+      font-weight: 500;
+      color: #A8AAAE;
+    }
+
+    >span {
+      @include font(18px, 600);
+      color: $dark_gray;
+    }
+
+    button {
+      padding: 5px 10px;
+      border-radius: 5px;
+      @include font(16px, 500);
+      margin-left: 10px;
+
+
+      &:first-of-type {
+        @include bgNColor(#13A3B9, #FFF);
+        border: none;
+      }
+
+      &:not(:first-of-type) {
+        @include bgNColor(none, $gray);
+        border: 1px solid $gray;
+      }
+    }
+  }
+
+  tbody {
+    button {
+      @include font(18px, 600);
+      @include bgNColor(#FFF, #13A3B9);
+      line-height: 22px;
+      @include borderNRadius(none, 2px);
+      padding: 10px;
+      margin: 0 2.5px;
+      width: 114px;
+
+      div {
+        @include flex(space-between, center);
+
+        span {
+          margin: 0 5px;
+        }
+      }
+    }
+  }
+
+  .ais_name {
+    @include font(20px, 700);
+    color: #272A33;
+  }
+
+  tr {
+    @include flex(space-between, center);
+    height: 54px;
+    padding: 5px 5px 5px 10px;
+
+    &:not(:last-of-type) {
+      border-bottom: 1px solid $light_gray;
+    }
+  }
+
+  .button_span--dark {
+    color: "#000";
+  }
+}
+
+.pagination_container {
+  @include flex(center);
+}
+
+.pagination_subcontainer {
+  @include flex($ai: center);
+  @include borderNRadius(1px solid $light_gray, 4px);
+  width: fit-content;
+  margin: 40px 0 80px;
+
+}
+
+.beginning,
+.end {
+  width: 40px;
+  height: 40px;
+  border-radius: 2px;
+  @include flex(center, center);
+  cursor: pointer;
+}
+
+.pagination {
+  @include flex($ai: center);
+
+  li {
+    width: 40px;
+    height: 40px;
+    border-radius: 2px;
+    @include flex(center, center);
+    @include font(16px, 500);
+    cursor: pointer;
+    color: #676A71;
+
+    a {
+      display: inline-flex;
+      align-items: center;
+    }
+  }
+
+  .pagination__link--active {
+    @include bgNColor(#13A3B9, #FFF);
+  }
+}
