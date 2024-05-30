@@ -17,10 +17,10 @@ const App = () => {
 
   return (
     <Router>
-      <Header user={user} text={user ? `${user.name} ${user.surname}` : "Вход в аккаунт"} />
+      <Header user={user} text={user.id ? `${user.name} ${user.surname}` : "Вход в аккаунт"} />
       <Routes>
         <Route path="/enter-form" element={<EnterForm />} />
-        {user ?
+        {user.id ?
           <>
             <Route path="/account" element={<Account />} />
             <Route path="/profile-form" element={<ProfileForm user={user} />} />

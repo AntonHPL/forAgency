@@ -59,10 +59,6 @@ const EnterForm: FC = () => {
 						</label>
 						<button className="main_btn" type="submit">Вход</button>
 						<br />
-						<button className="main_btn">
-							Авторизация с использованием ЕС ИФЮЛ
-						</button>
-						<br />
 						<Login />
 					</form>
 				</section>
